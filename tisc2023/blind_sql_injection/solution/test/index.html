@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    var Module = {
+      onRuntimeInitialized: function() {
+        craftQuery = Module.cwrap('craft_query', 'string', ['string', 'string']);
+      }
+    };
+  </script>
+  <script async src="site.js"></script>
+</head>
+<body>
+  <form id="queryForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="button" onclick="callCraftQuery()">Submit</button>
+  </form>
+  <div id="output"></div>
+  <script>
+    let craftQuery;
+    Module.onRuntimeInitialized = async function() {
+    craftQuery = Module.cwrap('craft_query', 'string', ['string', 'string']);
+    };
+
+    function callCraftQuery() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const result = craftQuery(username, password);
+        console.log('Result:', result);
+        document.getElementById('output').innerHTML = result;
+    }
+  </script>
+</body>
+</html>
