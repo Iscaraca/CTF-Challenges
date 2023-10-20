@@ -1,0 +1,5 @@
+One of your agents has found a proprietary stock market prediction service after enumerating Apocalypse's webservers! She believes that this endpoint was exposed on accident, and is one of the primary ways Apocalypse generates their income.
+
+Are you able to exfiltrate their prediction algorithm for ehem ""further analysis"" before they disallow public access?
+
+[Note: As the model must be as true to APOCALYPSE's as possible, the agency will only accept linear regression predictor objects from scikit-learn]

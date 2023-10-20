@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mission Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url({{ url_for('static', filename='img/hacker.jpg') }});
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Anti-Apocalypse Agency
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top w3-center">WELL DONE AGENT</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <br />
+    <p class="w3-large w3-center">Send in your scikit-learn LinearRegression model as a .pkl file. We'll check it against the predictions made by the Apocalypse model.</p>
+    <p class="w3-large w3-center">If your model's predictions have a mean squared error of less than 30, we'll accept it as a good approximation and give you the flag in return.</p>
+    <form method=post enctype=multipart/form-data>
+     <p class="text-light w3-center">
+        <input type=file name=file>
+        <input type=submit value=Upload>
+     </p>
+  </form>
+{% for mesg in get_flashed_messages() %}
+      <p class="w3-large w3-center">{{ mesg }}</p>
+      {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>

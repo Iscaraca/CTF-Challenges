@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    astockalypse_app:
+        build: ./astockalypse_app
+        ports:
+            - "5000:5000"
+            
+    astockalypse_submission:
+        build: ./astockalypse_submission
+        ports:
+            - "5001:5001"

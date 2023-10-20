@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astockalypse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url({{ url_for('static', filename='img/joker.jpg') }});
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Apocalypse
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top w3-center">ASTOCKALYPSE</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <br />
+    <p class="w3-large w3-center">Welcome to our proprietary stock market prediction algorithm for the APCL stock, now using <strong>scikit-learn's LinearRegression estimator</strong>!</p>
+    <p class="w3-large w3-center">Send in a CSV file with a maximum of 1000 rows where each row has the format: t1,t2,t3</p>
+    <p class="w3-large w3-center">where t1, t2, and t3 are the floating point prices of the APCL stock in dollars at each interval from 1 to 1000 inclusive, to 1dp. Example row: 123.4,43.5,45.0</p>
+    <p class="w3-large w3-center">We'll return a CSV file with the predicted price returns from each t3 to their corresponding t4 in order.</p>
+    <form method=post enctype=multipart/form-data>
+     <p class="text-light w3-center">
+        <input type=file name=file>
+        <input type=submit value=Upload>
+     </p>
+  </form>
+{% for mesg in get_flashed_messages() %}
+      <p class="w3-large w3-center">{{ mesg }}</p>
+      {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
