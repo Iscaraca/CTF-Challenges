@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TGBS Challenge Instancer</title>
+</head>
+<body>
+    <p>You have approximately 5 minutes to execute your exploit per attempt.</p>
+    <p>To avoid wasting resources and your time, PLEASE ENSURE you have successfully exploited the challenge locally using the downloaded zip file before attempting it on this remote server.</p>
+    <p>The zip file also contains important information about the challenge.</p>
+    <p>DO NOT CREATE MORE THAN ONE INSTANCE PER TEAM AT ANY POINT IN TIME. Be considerate.</p>
+    {% if not game %}
+        <a href="{{ url_for('generate') }}">Start challenge attempt</a>
+    {% endif %}
+    {% if game and proxy %}
+        <p>Your challenge can be accessed at these ports:</p>
+        <p>Game: {{ game }}</p>
+        <p>Proxy: {{ proxy }}</p>
+        <p>Please be patient, the containers need time to be created.</p>
+    {% endif %}
+</body>
+</html>

@@ -8,3 +8,5 @@ Index:
     - Astockalypse: A data science challenge that involves participants stealing a black-box stock prediction model
 - TISC 2023
     - Blind SQL Injection: WASM pwn cunningly disguised as a normal web challenge through an AWS lambda function
+- Cyberthon 2024
+    - The Galaxy's Best Smuggler: HTTP request smuggling to force a losing hand for your opponent in a game of blackjack where you're up against a cheater

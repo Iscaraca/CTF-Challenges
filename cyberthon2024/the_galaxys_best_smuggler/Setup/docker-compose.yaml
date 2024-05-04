@@ -1,0 +1,28 @@
+version : '3'
+
+services:
+    proxy:
+        # container_name: proxy
+        image: proxy
+        build: ./haproxy
+        ports:
+            - "${PROXY_PORT}:1080"
+    gameserver:
+        # container_name: gameserver
+        image: gameserver
+        build: ./gameserver
+    opponent:
+        # container_name: opponent
+        image: opponent
+        build: ./opponent 
+        depends_on:
+            - proxy
+            - gameserver
+    player:
+        # container_name: player
+        image: player
+        build: ./player
+        ports:
+            - "${PLAYER_PORT}:80"
+        depends_on:
+            - opponent
