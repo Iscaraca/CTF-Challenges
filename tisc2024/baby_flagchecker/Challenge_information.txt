@@ -1,0 +1,7 @@
+Category: Web5, Reverse Engineering
+Challenge Description:
+While scanning their network, you chance upon a tool used by <insert enemy name here> that checks for the validity of a secret passphrase.
+
+You know that they use this phrase for establishing communications between one another, but the one you have is way outdated.
+
+It's time for an update.

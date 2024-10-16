@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Keyphrase</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Don't forget to get the weekly keyphrase from DW! Check if your keyphrase is current on this website.</p>
+    <p>DISCLAIMER: We've recently migrated the keyphrase checking logic to smart contracts because of pressure from management to do something related to web3. Any vulnerabilities should be reported to management.</p>
+    <div class="container">
+        <h1>Enter Keyphrase</h1>
+        <form action="/submit" method="post">
+            <input id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

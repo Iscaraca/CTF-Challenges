@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ethers": "^6.13.1",
+    "sevm": "^0.6.16"
+  }
+}

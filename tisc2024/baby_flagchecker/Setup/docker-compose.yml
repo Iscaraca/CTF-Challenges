@@ -1,0 +1,29 @@
+services:
+  testnet:
+    build: 
+      context: testnet
+    image: testnet
+    healthcheck:
+      test: /root/.foundry/bin/cast chain --rpc-url http://127.0.0.1:8545
+      interval: 3s
+      timeout: 30s
+      retries: 10
+    restart: always
+  server:
+    build: 
+      context: server
+    image: server
+    depends_on: 
+      testnet:
+        condition: service_healthy
+        restart: true
+    restart: always
+  client:
+    build:
+      context: client
+    image: client
+    ports: 
+      - 80:80
+    depends_on: 
+      - server
+    restart: always
