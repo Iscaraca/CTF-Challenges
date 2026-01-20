@@ -11,3 +11,4 @@ Author writeups can be found at https://iscaraca.github.io/
 | TISC 2024        | Baby Flagchecker                                         |      ★★★⯪☆ | Novel instruction counting attack using gas estimates of a flagchecker EVM contract deployed to a private network        |
 | Welcome CTF 2025 | This Is Just One Of Those Classic Web Challenges         |      ★☆☆☆☆ | SQLi, but the injectable parameter is overwritten by variable name reuse                                                 |
 | Welcome CTF 2025 | This Is Just Another One Of Those Classic Web Challenges |      ★⯪☆☆☆ | SVG XSS                                                                                                                  |
+| Singapore AI CTF 2025   | Well Well Well                                             |      ★★★☆☆ | Reversing RoPE and finding pre-normalised embeddings from a KV cache                          |
