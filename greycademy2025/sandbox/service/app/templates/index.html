@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ModsNUS</title>
+</head>
+<body>
+    <h2>Welcome to ModsNUS™, a legally distinct platform that's more secure than the competition!</h2>
+
+    <form method="post">
+        <label for="code">Search module code:</label>
+        <input type="text" name="code" required>
+        <input type="hidden" name="api" value="https://api.nusmods.com/v2/2025-2026/modules/">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if result %}
+        <pre>Module info: {{ result }}</pre>
+    {% endif %}
+
+    <h3>Have a module you'd like to see addded? Send us a request!</h3>
+    <form method="get" action="{{ url_for('module_request') }}">
+        <label for="code">Module code: </label>
+        <input type="text" name="code" required><br><br>
+        <label for="code">Module name: </label>
+        <input type="text" name="name" required><br><br>
+        <label for="code">Description: </label>
+        <textarea name="description" required></textarea><br><br>
+        <button type="submit">Request</button>
+    </form><br><br>
+
+    <form method="post" action="{{ url_for('logout') }}">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

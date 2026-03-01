@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: chall
+    ports:
+      - "32900:80"
+    volumes:
+      - ./service/index.html:/usr/share/nginx/html/index.html:ro

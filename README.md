@@ -12,3 +12,7 @@ Author writeups can be found at https://iscaraca.github.io/
 | Welcome CTF 2025 | This Is Just One Of Those Classic Web Challenges         |      ★☆☆☆☆ | SQLi, but the injectable parameter is overwritten by variable name reuse                                                 |
 | Welcome CTF 2025 | This Is Just Another One Of Those Classic Web Challenges |      ★⯪☆☆☆ | SVG XSS                                                                                                                  |
 | Singapore AI CTF 2025   | Well Well Well                                             |      ★★★☆☆ | Reversing RoPE and finding pre-normalised embeddings from a KV cache                          |
+| A.YCEP x Greycademy 2025   | Sandbox                                             |      ★☆☆☆☆ | Tutorial SQL injection, XSS, and SSRF                          |
+| A.YCEP x Greycademy 2025   | Command Injection                                             |      ★☆☆☆☆ | Tutorial command  injection                          |
+| A.YCEP x Greycademy 2025   | How to solve a CTF challenge                                             |      ★☆☆☆☆ | Tutorial inspect element                      |
+| A.YCEP x Greycademy 2025   | Local File Inclusion                                             |      ★☆☆☆☆ | Tutorial LFI                          |
