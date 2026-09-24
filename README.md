@@ -16,3 +16,5 @@ Author writeups can be found at https://iscaraca.github.io/
 | A.YCEP x Greycademy 2025   | Command Injection                                             |      ★☆☆☆☆ | Tutorial command  injection                          |
 | A.YCEP x Greycademy 2025   | How to solve a CTF challenge                                             |      ★☆☆☆☆ | Tutorial inspect element                      |
 | A.YCEP x Greycademy 2025   | Local File Inclusion                                             |      ★☆☆☆☆ | Tutorial LFI                          |
+| GreyCTF 2026 | GreyCTF 2026 Feedback Form | ★★★☆☆ | URL parser differential 0-day |
+| GreyCTF 2026 | Let's Go Gambling! | ★★☆☆☆ | Ethereum cold cache hit side channel |
